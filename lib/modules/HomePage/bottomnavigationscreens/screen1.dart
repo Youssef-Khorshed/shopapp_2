@@ -35,9 +35,11 @@ class BottomScreen1 extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(20),
                     width: width,
+                    // ignore: prefer_const_constructors
                     decoration: BoxDecoration(
                         color: Color(0xFFFFFFFF),
                         borderRadius:
+                            // ignore: prefer_const_constructors
                             BorderRadius.only(topRight: Radius.circular(50))),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child:Column(
@@ -54,6 +56,7 @@ class BottomScreen1 extends StatelessWidget {
                          ,
 
                            GridView.builder(
+                          // ignore: prefer_const_constructors
                           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                               childAspectRatio: 1 / 2.3,
                               crossAxisCount: 2,

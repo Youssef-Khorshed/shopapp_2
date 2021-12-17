@@ -227,8 +227,9 @@ class Model extends ChangeNotifier {
       });
     }
     double total = sum + (sum * 0.15);
-    return Text('Price  $sum\ntaxes %15 \nTotal price ${total.round()} '
-    ,style: TextStyle(fontWeight: FontWeight.bold),
+    return Text(
+      'Price  $sum\ntaxes %15 \nTotal price ${total.round()} ',
+      style: TextStyle(fontWeight: FontWeight.bold),
     );
   }
 
@@ -249,18 +250,15 @@ class Model extends ChangeNotifier {
     Preference.put(key: 'cart', value: val).then((value) => null);
   }
 
-  void cartclear()
-  {
+  void cartclear() {
     Model.cartitems.clear();
     getproducts("");
     notifyListeners();
-
   }
-  void favclear()
-  {
+
+  void favclear() {
     Model.favitems.clear();
     getproducts("");
     notifyListeners();
-
   }
 }

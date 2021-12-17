@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:tst_new2/provider.dart';
 import 'package:tst_new2/shared/endpoints/end.dart';
@@ -32,6 +33,6 @@ void main() async {
       nextpage = Homepage();
     }
   }
-  runApp(const MyApp());
+  runApp( DevicePreview(builder: (context)=>MyApp(),) );
 }
 
